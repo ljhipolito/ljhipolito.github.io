@@ -7,73 +7,71 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
    body {
-        background-image: url('https://imgur.com/Y0AnHxs.jpg');
-        background-size: cover;
-        background-position: center;
-        color: #ffffff;
-        display: flex;
-        padding-left: 600px;
-        padding-top: 50px;
-    }
-    .content {
-        flex: 1;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        margin-top: 50px; 
-    }
-    .heading {
-        font-size: 32px;
-        margin-bottom: 20px;
-        font-weight: bold;
-        text-align: center;
-    }
-    .project-buttons {
-        display: flex;
-        gap: 20px;
-        margin-bottom: 20px;
-        justify-content: center;
-    }
-    .btn-custom {
-        background-color: #a07856;
-        border: none;
-        padding: 20px 35px;
-        font-size: 16px;
-        border-radius: 5px;
-        color: #ffffff;
-    }
-    .content {
-        flex: none;
-        padding: 10px;
-        justify-content: center;
-    }
-    .heading {
-        font-size: 24px;
-    }
-    .project-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-</style>
-</head>
-<body>
-
-
-<div class="content">
-    <div class="heading">My Projects</div>
-    <div class="project-buttons">
+          background-image: url('https://imgur.com/Y0AnHxs.jpg');
+          background-size: cover;
+          background-position: center;
+          color: #ffffff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          min-height: 100vh;
+      }
+      .content {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.7);
+          border-radius: 10px;
+      }
+      .heading {
+          font-size: 32px;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .project-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          justify-content: center;
+      }
+      .btn-custom {
+          background-color: #a07856;
+          border: none;
+          padding: 15px 25px;
+          font-size: 16px;
+          border-radius: 5px;
+          color: #ffffff;
+          width: 100%;
+          max-width: 200px;
+      }
+      @media (max-width: 576px) {
+          .heading {
+              font-size: 24px;
+          }
+          .btn-custom {
+              padding: 12px 20px;
+              font-size: 14px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="heading">My Projects</div>
+      <div class="project-buttons">
         <button class="btn btn-custom">Project 1</button>
         <button class="btn btn-custom">Project 2</button>
         <button class="btn btn-custom">Project 3</button>
         <button class="btn btn-custom">Project 4</button>
         <button class="btn btn-custom">Project 5</button>
+      </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
