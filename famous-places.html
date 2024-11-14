@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris - Famous Places</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Adding background image */
+        body {
+            background-image: url('https://imgur.com/gVsgXLX.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Styling the container box for each place */
+        .place-box {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.432);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            height: 300px; /* Set the desired height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Set image to fit within the box */
+        .place-box img {
+            max-height: 200px; /* Set the max height for images */
+            object-fit: cover;
+            width: 100%; /* Ensures the image fills the width */
+        }
+
+        .place-box:hover {
+            transform: scale(1.1);
+        }
+
+        /* Styling for modal */
+        .modal-header {
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+        <h1>Famous Places in Paris</h1>
+        <p>Click on a famous place to learn more:</p>
+
+        <div class="row">
+            <!-- Eiffel Tower -->
+            <div class="col-md-4">
+                <div class="place-box" data-toggle="modal" data-target="#eiffelModal">
+                    <h3>The Eiffel Tower</h3>
+                    <img src="https://w0.peakpx.com/wallpaper/103/249/HD-wallpaper-paris-summer-eiffel-tower-r-french-landmarks-europe-france-paris-at-summer.jpg" class="img-fluid" alt="Eiffel Tower">
+                </div>
+            </div>
+
+            <!-- Louvre Museum -->
+            <div class="col-md-4">
+                <div class="place-box" data-toggle="modal" data-target="#louvreModal">
+                    <h3>The Louvre Museum</h3>
+                    <img src="https://vernerjohnson.com/wp-content/uploads/2016/04/6.jpg" class="img-fluid" alt="Louvre Museum">
+                </div>
+            </div>
+
+            <!-- Notre-Dame Cathedral -->
+            <div class="col-md-4">
+                <div class="place-box" data-toggle="modal" data-target="#notreDameModal">
+                    <h3>Notre-Dame Cathedral</h3>
+                    <img src="https://c1.wallpaperflare.com/preview/477/181/174/paris-notre-dame-cathedral-france.jpg" class="img-fluid" alt="Notre-Dame Cathedral">
+                </div>
+            </div>
+
+            <!-- Sacré-Cœur Basilica -->
+            <div class="col-md-4">
+                <div class="place-box" data-toggle="modal" data-target="#sacreCœurModal">
+                    <h3>Sacré-Cœur Basilica</h3>
+                    <img src="https://www.descubreparis.com/wp-content/uploads/2020/07/CAT1_sacre_coeur_1245-copie-thegem-blog-default.jpeg" class="img-fluid" alt="Sacré-Cœur Basilica">
+                </div>
+            </div>
+
+            <!-- Arc de Triomphe -->
+            <div class="col-md-4">
+                <div class="place-box" data-toggle="modal" data-target="#arcTriompheModal">
+                    <h3>Arc de Triomphe</h3>
+                    <img src="https://www.baume-hotel-paris.com/images/monuments/xarc_triomphe.jpg.pagespeed.ic.HjDe7nde1m.jpg" class="img-fluid" alt="Arc de Triomphe">
+                </div>
+            </div>
+
+            <!-- Champs-Élysées -->
+            <div class="col-md-4">
+                <div class="place-box" data-toggle="modal" data-target="#champsElyseesModal">
+                    <h3>Champs-Élysées</h3>
+                    <img src="https://www.thetrainline.com/cms/media/4040/europe_france_paris_champs-elysees.jpg?mode=crop&width=800&height=800&quality=70" class="img-fluid" alt="Champs-Élysées">
+                </div>
+            </div>
+        </div>
+
+        <!-- Eiffel Tower Modal -->
+        <div class="modal fade" id="eiffelModal" tabindex="-1" role="dialog" aria-labelledby="eiffelModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="eiffelModalLabel">The Eiffel Tower</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Eiffel Tower, an iron lattice tower, is one of the most recognizable structures in the world and a global cultural icon of France.</p>
+                        <img src="https://w0.peakpx.com/wallpaper/103/249/HD-wallpaper-paris-summer-eiffel-tower-r-french-landmarks-europe-france-paris-at-summer.jpg" class="img-fluid" alt="Eiffel Tower">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Louvre Museum Modal -->
+        <div class="modal fade" id="louvreModal" tabindex="-1" role="dialog" aria-labelledby="louvreModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="louvreModalLabel">The Louvre Museum</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Louvre is the world's largest art museum and a historic monument in Paris, best known for housing the Mona Lisa and the Venus de Milo.</p>
+                        <img src="https://vernerjohnson.com/wp-content/uploads/2016/04/6.jpg" class="img-fluid" alt="Louvre Museum">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notre-Dame Cathedral Modal -->
+        <div class="modal fade" id="notreDameModal" tabindex="-1" role="dialog" aria-labelledby="notreDameModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="notreDameModalLabel">Notre-Dame Cathedral</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Notre-Dame Cathedral is a medieval Catholic cathedral on the Île de la Cité, widely considered to be one of the finest examples of French Gothic architecture.</p>
+                        <img src="https://c1.wallpaperflare.com/preview/477/181/174/paris-notre-dame-cathedral-france.jpg" class="img-fluid" alt="Notre-Dame Cathedral">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sacré-Cœur Basilica Modal -->
+        <div class="modal fade" id="sacreCœurModal" tabindex="-1" role="dialog" aria-labelledby="sacreCœurModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sacreCœurModalLabel">Sacré-Cœur Basilica</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Sacré-Cœur Basilica is a Roman Catholic church and a popular Parisian landmark located at the highest point in the city, Montmartre.</p>
+                        <img src="https://www.descubreparis.com/wp-content/uploads/2020/07/CAT1_sacre_coeur_1245-copie-thegem-blog-default.jpeg" class="img-fluid" alt="Sacré-Cœur Basilica">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arc de Triomphe Modal -->
+        <div class="modal fade" id="arcTriompheModal" tabindex="-1" role="dialog" aria-labelledby="arcTriompheModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="arcTriompheModalLabel">Arc de Triomphe</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Arc de Triomphe honors those who fought and died during the French Revolutionary and Napoleonic Wars.</p>
+                        <img src="https://www.baume-hotel-paris.com/images/monuments/xarc_triomphe.jpg.pagespeed.ic.HjDe7nde1m.jpg" class="img-fluid" alt="Arc de Triomphe">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Champs-Élysées Modal -->
+        <div class="modal fade" id="champsElyseesModal" tabindex="-1" role="dialog" aria-labelledby="champsElyseesModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="champsElyseesModalLabel">Champs-Élysées</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>The Champs-Élysées is one of the most famous avenues in the world, leading to the Arc de Triomphe from the Place de la Concorde.</p>
+                        <img src="https://www.thetrainline.com/cms/media/4040/europe_france_paris_champs-elysees.jpg?mode=crop&width=800&height=800&quality=70" class="img-fluid" alt="Champs-Élysées">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="btn btn-secondary btn-back">Back to Home</a>
+        <a href="contact.html" class="btn btn-secondary btn-back">Next</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
